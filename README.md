@@ -47,7 +47,7 @@ Licensed under Apache License 2.0.
 
 Add to _build.gradle_:
 
-`compile 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'`
+`compile 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'
 
  change to
 
@@ -57,8 +57,8 @@ Add to _build.gradle_:
 			maven { url 'https://jitpack.io' }
 		}
     }
-    
- implementation 'com.github.moz1q1:AndroidPdfViewer:3.1.0-beta.1'
+
+ implementation 'com.github.moz1q1:AndroidPdfViewer:3.1.0-beta.1'`
 
 or if you want to use more stable version:
  
