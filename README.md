@@ -49,6 +49,17 @@ Add to _build.gradle_:
 
 `compile 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'`
 
+ change to
+
+  allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+    }
+    
+ implementation 'com.github.moz1q1:AndroidPdfViewer:3.1.0-beta.1'
+
 or if you want to use more stable version:
  
 `compile 'com.github.barteksc:android-pdf-viewer:2.8.2'`
