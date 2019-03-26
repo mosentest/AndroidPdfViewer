@@ -18,6 +18,23 @@ Licensed under Apache License 2.0.
 * Update Gradle Plugin
 * Update compile SDK and support library to 26
 * Change minimum SDK to 14
+*
+```
+ // Check Y offset
+            float contentHeight = pdfFile.getDocLen(zoom);
+            if (contentHeight < getHeight()) { // whole document height visible on screen
+//                offsetY = (getHeight() - contentHeight) / 2;
+                //改为顶部不居中
+                //Align page on top https://github.com/barteksc/AndroidPdfViewer/issues/733
+                offsetY = 0;
+            } else {
+                if (offsetY > 0) { // top visible
+                    offsetY = 0;
+                } else if (offsetY + contentHeight < getHeight()) { // bottom visible
+                    offsetY = -contentHeight + getHeight();
+                }
+            }
+```
 
 ## Changes in 3.0 API
 * Replaced `Contants.PRELOAD_COUNT` with `PRELOAD_OFFSET`
